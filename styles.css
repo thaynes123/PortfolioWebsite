@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /*1rem = 10px*/
+    font-family: "Lucinda Console", Monaco, monospace;
+}
+
+body {
+    width: 80vw;
+    margin: 0 auto;
+    background-image: url("IMG_0913.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    padding: 3rem;
+}
+
+nav {
+    margin: 2rem;
+    text-align: center;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    margin: 0 2rem;
+    color: darkgray;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: gray;
+}
+
+main {
+    margin: 3rem 0;;
+}
+
+section {
+    width: 33.33%;
+    float: left;
+    padding: 0 2rem;
+}
+
+
+
+aside {
+    width: 33.33%;
+    float: left;
+    padding: 0 2rem;
+}
+
+footer {
+  background-color: darkseagreen;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+}
+
+
+.clearfix::after {
+    content: "";
+    clear:both;
+    display:block;
+}
