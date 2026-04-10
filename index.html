@@ -1,57 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tessa's Portfolio</title>
-</head>
+    <title>Tessa Haynes Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        header {
+        background-color: white;
+        color: white;
+        padding: 20px;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        opacity: 70%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    padding: 8px 1px;
+  }
+  
+  .navbar a:hover {
+    color: grey;
+    border-radius: 4px;
+  }
+  
+  /* Marquee Styles */
+  .marquee {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    width: 10%;
+    box-sizing: border-box;
+  }
 
+        .portfolio .portfolio-grid a {text-decoration: none; color:#000;}
+
+        .portfolio .portfolio-grid a:hover {color:grey;}
+
+        
+
+        
+
+        .hero {
+            text-align: center;
+            padding-top: 80px;
+            padding-left: 0px;
+            padding-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 6.5em;
+            text-align: left;
+            font-weight: bolder;
+        }
+        .hero span {
+            color: #f4b400;
+        }
+        .hero button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+        }
+       
+        .design-process, .portfolio, .contact {
+            padding-top:40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .about p {
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 1.2em;
+        }
+
+        .about h2 {
+            padding-left: 50px;
+            padding-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+        }
+
+        .grid, .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card, .project {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card, .project h3 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .card, .project p {
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        :root {
+  --height: 150px;
+  --speed: 30s;
+}
+
+
+.typing {
+      font-size: 6rem;
+      color: #333;
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: left;
+      height: 130px;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #333; }
+    }
+
+    .typing::after {
+      content: '';
+      animation: blink 0.7s infinite;
+    } 
+
+    </style>
+</head>
 <body>
-   <header>
-       <h1>Tessa Haynes</h1>
-   </header>
-   <nav>
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="gallery.html">Gallery</a>
-       <a href="contact.html">Contact</a>
-   </nav>
-   
-   <div class="main-image">
-       <img src="DSCN0182.jpg" alt="main-image">
-   </div>
-   
-   <main class="clearfix">
-       <section>
-           <p>"Coding is today's language of creativity. All our children deserve a chance to become creators instead of consumers of computer science." -Maria Klawe</p>
-            &nbsp;&nbsp;
-           <p>"Imagination is more important than knowledge." -Albert Einstein</p>
-           &nbsp;&nbsp;
-           <p>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." -Martin Fowler</p>
-           &nbsp;&nbsp;
-           <p>"All our dreams can come true if we have the courage to pursue them." -Walt Disney</p>
-       </section>
-       <aside>
-           <h2>Hello World!</h2>
-           &nbsp;&nbsp;
-           <h3>Greetings!</h3>
-           &nbsp;&nbsp;
-           <h3>I am Tessa Haynes, and I would like to welcome you to my portfolio website.</h3>
-           &nbsp;&nbsp;
-           <h3>I encourage you to stay a while, learn a bit more about me, and take a look at the projects I have been working on in my gallery.
-           </h3>
-       </aside>
-       <aside>
-           <p>"I dream. Sometimes I think that's the only right thing to do." <br>-Haruki Murakami</p>
-           &nbsp;&nbsp;
-           <p>"If you don't imagine, nothing ever happens at all." -John Green</p>
-           &nbsp;&nbsp;
-           <p>"The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge." -Stephen Hawking</p>
-           &nbsp;&nbsp;
-           <p>"If you think you are worth what you know, you are very wrong. Your knowledge today does not have much value beyond a couple years. Your value is what you can learn and how easily you can adapt to changes this profession brings up so often." -Jose M. Aguilar</p>
-       </aside>
-   </main>
-   <footer>2020 Copyright by Tessa Haynes.</footer>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="https://docs.google.com/document/d/1p92bY0OV2M970tK3Kqkh-zzX9lc1mFgBZt_W1u_P860/edit?usp=sharing" target="_blank">RESUME</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+      <img src="3D Portfolio Video.gif" style="width:100%">
+
+      
+      <!--
+        <div class="typing" id="type"></div>
+        <div style="visibility:hidden; position:absolute;">Hej Hej</div>
+
+  <script>
+    const words = ["HELLO", "HALLO", "HEJ HEJ", "HOLA", "CIAO"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingSpeed = 150;
+    const deletingSpeed = 100;
+    const pauseBetweenWords = 1000;
+
+    function type() {
+      const display = document.getElementById("type");
+      currentWord = words[i];
+
+      if (isDeleting) {
+        display.textContent = currentWord.substring(0, j--);
+      } else {
+        display.textContent = currentWord.substring(0, j++);
+      }
+
+      if (!isDeleting && j === currentWord.length + 1) {
+        isDeleting = true;
+        setTimeout(type, pauseBetweenWords);
+        return;
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+
+      setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+    }
+
+    type();
+  </script>
+
+
+
+        <h1>I'M TESSA ;)</h1>
+        <h1>I DESIGN INTERACTIONS AND <span>EXPERIENCES</span>.</h1>
+-->
+    </section>
+    
+    <section class="design-process" id="design-process">
+      <img src="Scrapbook Creative Portfolio Presentation copy.gif" style="width:100%">
+      
+      <img src="Scrapbook Creative Portfolio Presentation copy 2.gif" style="width:100%">
+      
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      
+      <img src="Untitled design.gif" style="width:100%">
+        <div class="portfolio-grid">
+            
+            <div class="project">
+                <img src="1.png" style="width:100%">
+                <a href="https://www.canva.com/design/DAGe8aqa0g4/gig0uQjgbYVeXlnn3C9FHw/view?utm_content=DAGe8aqa0g4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1065eebbe3" target="_blank">
+                <h3>Social Dance Near Me</h3>
+                <p>Case study of a web application made for and by Atlanta's social dancers.</p>
+                </a>
+            </div>
+            
+            <div class="project">
+                <img src="2.png" style="width:100%">
+                <a href="https://drive.google.com/file/d/1eEG9JXCEo4Rl0306cz9CaRVODJ3tsm2_/view?usp=sharing" target="_blank">
+                <h3>TutorVerse</h3>
+                <p>Case study of a multi-channel personalized AI tutor.</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="3.png" style="width:100%">
+                <a href="https://www.canva.com/design/DAGe8zAeizQ/XgeWS1dKWmSh_oc4AcAvtQ/view?utm_content=DAGe8zAeizQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6a931bfcee" target="_blank">
+                <h3>ShelfScout</h3>
+                <p>Case study of an application designed to build a bookish community around your local bookstore</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="4.png" style="width:100%">
+                <a href="https://docs.google.com/document/d/1XIbT9ctGMWtMedCtg2Rf43pt0s3L5_smOM8dkjxVEF0/edit?usp=sharing" target="_blank">
+                <h3>Multi-sensory Aids</h3>
+                <p>A short review of literature on mult-modal interfaces as navigational aids for enhancing spatial awareness in the visually impaired.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>HERE'S A BIT MORE ABOUT ME:</h2>
+        <p>I'm addicted to Duolingo. I love to give people book recommendations. My preferred form of communication is movie quotes, but my passion is dance.</p>
+        <p>Growing up as a dancer, I’ve spent years observing, interpreting, and creating meaningful movements, and I’ve come to realize how deeply the principles of movement and flow apply to the design of digital experiences.</p>
+        <p>Dance has taught me to think about space, rhythm, and transitions—qualities that are essential in interaction design. When performing or choreographing, I find it imperative to consider how each gesture or movement connects with the next, how it feels in space, and how it influences the overall experience for an audience. In the same vein, as an interaction designer and user researcher, I approach digital interfaces with a similar mindset: designing smooth transitions, intuitive flows, and creating engaging, user-centric experiences that feel natural and responsive.</p>
+        <p>Through my dancing, I have also developed a deep understanding of empathy and body awareness. I’m able to perceive subtle nuances in how people respond to movement, and this translates well into the ability to understand how users interact with digital spaces and interfaces. I approach design with a focus on both functionality and emotional resonance, aiming to create experiences that users can not only navigate easily but also feel connected to on a deeper level.</p>
+        <p>Additionally, my experiences working with a team of dancers, choreographers, and artists has honed my ability to collaborate effectively, listen deeply, and offer constructive feedback—all of which I believe are crucial skills in a design environment. I am excited about the opportunity to bring my creative, detail-oriented, and collaborative approach to your team, and to continue learning and growing as an interaction designer and user researcher.</p>
+    </section>
+    
+    <section class="contact">
+       
+    </section>
+    
+    <footer>
+        <p>&copy; Tessa Haynes</p>
+    </footer>
 </body>
 </html>
